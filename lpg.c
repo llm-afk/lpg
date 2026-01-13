@@ -28,7 +28,7 @@ void lpg_register(lpg_t* lpg, const lpg_seg_t* segments, uint16_t seg_num, lpg_c
     unit->down = down;
     unit->seg_index = 0;
     unit->tick_count = 0;
-    unit->level = segments[0].level;  // 初始电平
+    unit->level = segments[0].level; // 初始电平
     unit->level_pre = segments[0].level;
     lpg->unit_num++;
 }
@@ -79,3 +79,4 @@ void lpg_loop(lpg_t* lpg)
         unit->tick_count++;
     }
 }
+
