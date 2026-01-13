@@ -67,16 +67,15 @@ void lpg_loop(lpg_t* lpg)
             unit->level = unit->segments[unit->seg_index].level;
         }
         
-        if(unit->level_pre == 0 && unit->level == 1) 
+        if(unit->level_pre == 0 && unit->level == 1 && unit->up) 
         {
-            if (unit->up) unit->up(unit);
+            unit->up(unit);
         }
-        else if(unit->level_pre == 1 && unit->level == 0) 
+        else if(unit->level_pre == 1 && unit->level == 0 && unit->down) 
         {
-            if (unit->down) unit->down(unit);
+            unit->down(unit);
         }
 
         unit->tick_count++;
     }
 }
-
