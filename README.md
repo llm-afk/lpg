@@ -1,1 +1,1 @@
-# Level Pattern Generator 电平序列输出
+# (LPG)Level Pattern Generator 电平序列输出
